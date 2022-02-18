@@ -1,6 +1,6 @@
 import { ChatEngine } from 'react-chat-engine';
 import './app.css' ;
-import ChatFeed from './componenets/ChatFeed';
+import ChatFeed from './components/ChatFeed';
 
 const App = () => {
     return (
@@ -11,7 +11,9 @@ const App = () => {
             userName="aryabagde"
             userSecret="1234"
             renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} /> }  // render own component for the entire Chat Feed
-        //                                   Spread the props
+        // chatAppProps -> props that have something to do with the chat
+        // We created our own componenet known as ChatFeed -> it can spread all the props coming from the chat engine
+        // To spread the props you have to wrap them around curly braces
         />
     );
 }
